@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constro-building</title>
+    <link href="https://htmlcodex.com/wp-content/themes/gridlove-child/assets/css/demo.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; 
+        .templates a { color: #009CFF; text-decoration: none; font-weight: bold; }
+        .responsive a { margin-right: 10px; cursor: pointer; }
+        .download { display: flex; align-items: center; color: #fff; background: #009CFF; padding: 10px; border-radius: 5px; text-decoration: none; }
+        .download img { margin-right: 10px; }
+        .bottom-fixed-ads { display: none; }
+        iframe { width: 100%; height: 100vh; border: none; }
+    </style>
+</head>
+<body>
+
+<div id="loader" class="show">
+    <div class="loader"></div>
+</div>
+
+<div id="demo-switcher">
+    <div class="logo">
+        <a href="https://htmlcodex.com">
+            <img src="https://htmlcodex.com/wp-content/themes/gridlove-child/assets/img/logo.png" alt="HTML Codex">
+        </a>
+    </div>
+    <div class="templates">
+        <a href="https://htmlcodex.com/template">All Free Templates</a>
+    </div>
+    </div>
+    <a class="download" href="https://htmlcodex.com/downloading/?item=3351">
+        <img src="https://htmlcodex.com/wp-content/themes/gridlove-child/assets/img/download.png" alt="">
+        Download
+    </a>
+    <a class="close" href="https://demo.htmlcodex.com/3351/building-construction-website-template">Remove</a>
+</div>
+
+<iframe src="https://demo.htmlcodex.com/3351/building-construction-website-template"></iframe>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#loader').removeClass('show');
+        $('.bottom-fixed-ads').css('bottom', '0').click(function() {
+            $(this).toggleClass('show hide');
+        });
+
+        var screenWidths = {
+            desktop: "100%",
+            tabletlandscape: 1040,
+            tabletportrait: 788,
+            mobilelandscape: 500,
+            mobileportrait: 360
+        };
+
+        $(".responsive a").click(function() {
+            var device = $(this).attr('class');
+            $('#iframe').width(screenWidths[device]);
+            $(".responsive a").removeClass('active');
+            $(this).addClass('active');
+            return false;
+        });
+    });
+</script>
+
+</body>
+</html>
