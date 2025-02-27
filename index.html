@@ -18,6 +18,10 @@
 
 
         }
+        html,body{
+            overflow-x:hidden ;
+        
+        }
 
 
 
@@ -93,10 +97,13 @@
             color: rgb(120, 123, 130);
         }
         @media screen and(min-width:200px ) and (max-width:576px){
-            .child1{
-                display: grid;
+            body{
+                font-size: 14px;
             }
-        }
+            
+                
+            }
+        
 
         .child2 {
             display:flex;
@@ -112,6 +119,8 @@
             overflow: hidden;
             word-spacing: 10%;
             z-index: 100;
+            width: 100;
+            height: auto;
             
             
             
@@ -128,6 +137,7 @@
             display: grid;
             grid-template-columns: auto auto;
             align-items: center;
+            width: 100;
 
         }
 
@@ -178,11 +188,7 @@
 
 
         }
-        @media screen and(min-width:200px) and (max-width:576px){
-            .child2{
-                display: grid;
-            }
-        }
+       
 
         .child5 {
             background-color: rgba(246, 240, 240, 0.774);
@@ -193,14 +199,14 @@
         .child5aaa {
             padding-bottom: 7%;
 
-            padding-left: 40%;
+            padding-left: 20%;
             font-size: xx-large;
 
         }
 
         .child5aa {
             padding: 3%;
-            padding-left: 40%;
+            padding-left: 20%;
             font-size: 50px;
             color: orangered;
 
@@ -351,6 +357,7 @@
         .container {
             overflow: hidden;
             margin: 5%;
+        
         }
 
         /* child7 properties*/
@@ -535,6 +542,7 @@
             background-color: rgb(13, 13, 74);
             display: grid;
             grid-template-columns: auto auto auto;
+            margin-bottom: 2%;
         
         }
         .child11a{
@@ -573,8 +581,23 @@
             align-content: end;
             
         }
+        @media screen and (min-width: 200px) and (max-width: 576px){
+            .body{
+                overflow-x: hidden;
+                
+                margin: 0;
+                padding: 2%;
+                font-size: 14px;
+                
+            }
+        }
         /* Media Query for Child 1 */
 @media screen and (min-width: 200px) and (max-width: 576px) {
+
+    
+        
+
+
     .child1 {
         display: block; /* Stack elements vertically */
         padding: 1%; /* Adjust padding */
@@ -593,18 +616,35 @@
     }
 }
 
+
 /* Media Query for Child 2 */
 @media screen and (min-width: 200px) and (max-width: 576px) {
+
+       
+
+
+
+
     .child2 {
         display: block; /* Stack items vertically */
         align-items: center; /* Center items */
         padding: 10px; /* Adjust padding */
-        background-color: lightcyan;
+        background-color: black;
+        size: 20%;
+        justify-content: center;
+        text-align: center;
+        
+        
+    
+        
         
     }
 
     .child2a {
         text-align: center; /* Center text */
+        justify-content: center;
+        
+    
     }
 
     .child2b {
@@ -613,32 +653,49 @@
         margin: 0; /* Reset margin */
         text-align: center; /* Center text */
         font-size: large;
+        
+    
+       
+    
 
     }
 
     .child2ba {
         margin-bottom: 10px; /* Add space between items */
+        
+    
     }
-}
+
 
 /* Media Query for Child 3 */
 @media screen and (min-width: 200px) and (max-width: 576px) {
+
+
+
     .child3 {
         padding: 10%; /* Adjust padding */
         text-align: center; /* Center text */
         font-size: large;
+        
+    
         
     }
 
     .child3a, .child3c, .child3d {
         margin-bottom: 10px; /* Add space between items */
         font-size: large;
+        
+        
+    
 
     }
     .child3d{
         background-color: lightblue;
         color: black;
      transform: rotate(360 deg);
+    
+    
+    
 
     }
 }
@@ -648,26 +705,44 @@
     .child4 {
         display: block; /* Stack items vertically */
         margin: 2%; /* Adjust margin */
+    
+    
     }
 
     .child4a, .child4b {
         text-align: center; /* Center text */
-        overflow: hidden;
+        overflow-x: hidden;
+        font-size: 14px;
+        
+        
+        
+    
         
     }
 
     .child4ba {
         margin-bottom: 10px; /* Add space between items */
+        
+        
+    
     }
 
     .child4bab {
         display: block; /* Stack items vertically */
         margin: 10%; /* Adjust margin */
+        overflow-x: hidden;
+        font-size: 14px;
+    
+        
+    
     }
 
     .child4bs {
         display: block; /* Stack items vertically */
         margin: 10px 0; /* Add space between items */
+        overflow-x:hidden;
+        font-size: 14px;
+        
     }
 }
 
@@ -676,20 +751,46 @@
     .child5 {
         display: block; /* Stack items vertically */
         margin: 3%; /* Adjust margin */
+        overflow-x: hidden;
+        font-size: 14px;
+        justify-content: center;
+        text-align: center;
+        
+    
+    
     }
 
     .child5a, .child5aa, .child5aaa {
         text-align: center; /* Center text */
         margin-bottom: 10px; /* Add space between items */
+        overflow-x: hidden;
+        font-size: 14px;
+        justify-content: center;
+        justify-items: center;
+        
+        
+        
+    
     }
 
     .child5b {
         display: grid; /* Keep grid layout */
         grid-template-columns: 1fr; /* Single column layout */
+        overflow-x: hidden;
+        font-size: 14px;
+        
+        
+    
     }
 
     .box1 {
         margin-bottom: 20px; /* Add space between boxes */
+        overflow-x: hidden;
+        font-size: 14px;
+        
+
+
+    
     }
 }
 
@@ -703,17 +804,29 @@
 /* Media Query for Child 7 */
 @media screen and (min-width: 200px) and (max-width: 576px) {
     .child7 {
-        display: block; /* Keep flex layout */
-        flex-direction: column; /* Stack items vertically */
+        display: grid; /* Keep grid layout */
+        grid-template-columns:1fr; /* Stack items vertically */
         align-items: center; /* Center items */
+        
+        
+    
     }
 
     .child7a {
         margin-bottom: 20px; /* Add space between items */
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    
     }
 
     .child7b {
+    
+    
         margin-bottom: 10px; /* Add space between items */
+        
+        
+    
     }
 }
 
@@ -722,19 +835,31 @@
     .child8 {
         padding: 5%; /* Adjust padding */
         text-align: center; /* Center text */
+        
+
+    
     }
 
     .child8a {
         margin-bottom: 10px; /* Add space between items */
+        
+        
+    
     }
 
     .projects {
         display: block; /* Stack projects vertically */
+        
+    
+    
     }
 
     .project1, .project2, .project3, .project4 {
         width: 100%; /* Full width for smaller screens */
         margin-bottom: 20px; /* Add space between projects */
+        
+        
+    
     }
 }
 
@@ -743,19 +868,31 @@
     .child9 {
         padding: 5%;
         text-align: center; /* Center text */
+    
+    
+    
     }
 
     .child9a {
         margin-bottom: 10px; /* Add space between items */
+        
+        
+    
     }
 
     .child9b {
         display: grid; /* Keep grid layout */
         grid-template-columns: 1fr; /* Single column layout */
+
+        
+    
     }
 
     .team {
         margin-bottom: 20px; /* Add space between team members */
+        
+        
+    
     }
 }
 
@@ -763,17 +900,23 @@
 @media screen and (min-width: 200px) and (max-width: 576px) {
     .child10 {
         display: none; /* Hide or adjust as needed */
+        
+
+    
     }
 }
 
 /* Media Query for Child 11 */
 @media screen and (min-width: 200px) and (max-width: 576px) {
     .child11 {
-        display: grid; /* Hide or adjust as needed */
-        grid-template-columns: 1fr 1fr ;
-        width: fit-content;
-        height: fit-content;
-        gap: 1%;
+        display: grid; 
+        grid-template-columns: 1fr  ;
+        
+        
+    
+    
+        
+    
     }
     
     
@@ -782,9 +925,13 @@
  .child7{
     display: grid;
     grid-template-columns: 1fr;
+    
+    
+    
  }
 
 
+}
 
 
 
@@ -869,7 +1016,7 @@
             </div>
             
                                                                                                                 
-0            
+           
 
 
 
@@ -998,7 +1145,7 @@
         </div>
 
 
-    </div>
+    
     
     <div class="child7">
         <div class="child7a">
@@ -1265,6 +1412,7 @@
 
     </div>
     </div>
+</div>
     <script >AOS.init();</script>
 
 </body>
